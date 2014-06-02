@@ -1,0 +1,111 @@
+######
+1: gènes tels que BRC1 et BRC2. Cette notion ne fait que
+2: journals and to launch an exciting intellectual adventure.
+2: malaria or against AIDS!). There is also antibiotic therapy, exploited to full
+2: world, 6 million individuals are ready to give their marrow to
+gs://pmc_clone/DoMe/1/001.PMC102137.pdf
+Query2do.dm
+#######
+######
+1: the action of UV on target cells (keratinocytes) for neoplastic
+1: In the normal human epidermis, cells are constantly turning over, about once a
+1: constantly turning over, about once a month. During this period, stem cells
+1: differentiate into squamous cells producing keratin and other
+1: hyperplasia, formation of sunburn cells, photoaging, suppression of the immune
+1: the molecular events that occur in cells following UV exposure are DNA damage,
+1: the repair of DNA damage. UV can also induce apoptosis to
+1: order cells containing damaged DNA to self-destruct. It has
+1: in UV skin carcinogenesis [5]. Because cells containing p53 mutations are
+1: acquire a growth advantage. It is likely that the mutated cells
+1: NBCCS, also called basal cell nexus syndrome or Gorlin’s syndrome, is a rare
+1: BCC from otherwise normal individuals, some of which are
+2: also play a role in the development of BCC [9].
+2: T cells, either by damaged Langerhans cells or inﬂammatory macrophages that
+2: T cells, either by damaged Langerhans cells or inﬂammatory macrophages that
+2: after UV damage [11]. In addition, UV irradiation can also convert normal
+gs://pmc_clone/DoMe/1/003.PMC79671.pdf
+Query2do.dm
+#######
+######
+1: in mitotically growing cells. After the introduction of major DNA injuries the
+1: of major DNA injuries the levels of posttranslationally modiﬁed p53 proteins
+1: instabilities at different control levels both during naturally occurring
+1: product of a 14-3-3 gene, which is also transcriptionally activated by p53,
+1: p53 also binds to the two helicase components, XPB and XPD,
+1: nucleotide excision repair in cells lacking wild-type p53, as determined by
+2: multiple functions of p53. p53 surveils the genomic integrity via a hierarchy
+2: crease in sister chromatid exchanges after UV in cells from
+2: one to two orders of magnitude [29–32]. p53 has also been
+2: mitotically growing cells is suppressed by a factor of 1000
+3: exchange processes of mitotically growing cells [41–43], the surveillance of
+3: [5] Nelson WG, Kastan MB. DNA strand breaks: the DNA
+3: [7] Lane D. Awakening angels. Nature. 1998;394:616–617.
+3: cells. Cell Growth Differ. 1996;7:301–310.
+3: of DNA damage in p53deﬁcient mouse cells. Int J Cancer. 1994;58:254–257.
+3: homologous recombination in mammalian cells expressing a mutant p53 protein.
+4: Reis RJ. Elevated recombination in immortal human cells is mediated by
+gs://pmc_clone/DoMe/1/004.PMC79672.pdf
+Query2do.dm
+#######
+######
+1: impairment of T cell proliferation also occurred during the acute phase of
+1: allow rational design of tools to control T. cruzi infections.
+1: of reports have described the presence of suppressor cells (T lymphocytes and
+1: macrophages) in humans and animals infected with various
+1: between T. cruzi and mammalian cells was also reported as
+1: between T. cruzi and mammalian cells was also reported as
+2: of immunoglobulin-secreting cells in the spleen and peripheral lymph nodes is
+2: of parasitized and nonparasitized cells. High cellularity (60%–70% of
+2: The hybridomas produced by spleen B cells or lymph nodes
+2: T cells of infected mice fail to bind parasite Ag but are autoreactive clones,
+2: thyroglobulin, or myelin. T cells are also polyclonally activated and display
+2: thyroglobulin, or myelin. T cells are also polyclonally activated and display
+2: also polyclonally activated and display high levels of cytolytic and helper
+2: the increase of Ig secreting spleen cells. The elimination of T cells
+2: the increase of Ig secreting spleen cells. The elimination of T cells
+2: IgG2b secreting spleen cells characteristic of the T. cruzi infection.
+2: a protective response mediated by CD8 cells but does not induce polyclonal
+2: amplify the proliferative response of presensitized cells and could induce the
+2: on B cells, that is, T cell independent [5].
+2: activation of both T and B cells, paradoxically, T cells isolated at the acute
+2: of both T and B cells, paradoxically, T cells isolated at the acute phase of
+2: [1]. In vitro activated T cells from infected mice show a lower IL-2
+2: the activity of parasite molecules and the immunosuppressive cells have been
+2: mice, the activation of CD4 cells is deﬁcient, indicating that
+2: In fact, the notion of suppressive cell populations (T cells,
+2: NK cells or macropahges) being involved in the immunosuppression phenomenon
+2: been also reported. Indeed, it has been shown that a T. cruzi
+3: effect for human or murine T cells, instead Tc52 preparation at 1–4 µ g/ml
+3: cell proliferation. The cells were not killed by Tc52 but were
+3: are initiated. Indeed, treatment of responding cells with Tc52 at least
+3: the diverse responses of T cells appear to involve a complex series of
+3: a complex series of secondary signals in addition to the triggering of T cell
+3: amino acid to T cells which in turn could increase their own
+3: not methionine or other amino acids. Moreover, cells from
+4: normal mouse spleen cells. Interestingly, the level of anti-CD3
+4: cells from T. cruzi-infected mice with culture medium supplemented with
+4: the immune system [11]. Moreover, T cells have been shown
+4: Ig (right peak, 78% ﬂuorescent cells). The left peak represents cells which
+4: 78% ﬂuorescent cells). The left peak represents cells which were incubated
+4: ﬂuorescent cells). Panel (B) shows that Tc52 “sticks” to macrophages
+4: upon its interaction with these cells at 37◦ C. Panel (C) represents
+4: with Tc52. The clumps of staining could be inside the cells or could
+4: GSE, which is readily transported into cells and processed to
+4: source of plasma thiols and the most prevalent cellular thiol
+4: [14]. The inducible iNOS mRNA levels were also increased upon stimulation of
+4: [14]. The inducible iNOS mRNA levels were also increased upon stimulation of
+4: intensity was converted into colors by the computer. Positive signals
+4: the cells or could be capped Tc52 that is on the upper surface
+4: cells (cell surface receptors?) and how it interacts to modify the
+5: before an antigenspeciﬁc immune response is generated. Also, the synergistic
+5: but has been reported in a number of other parasite models
+5: CD8+ cytotoxic T cells, TNF-α cytotoxicity, autoantibodies
+5: inside T. cruzi infected cardiac endothelial cells and myocytes which have a
+5: proliferate in cultured mammalian cells and in BALB/c mice
+5: cells and for efﬁcient DNA repair, these ﬁndings may suggest
+6: given gene product but may also be useful to develop stable
+6: activation of TcRI T cells. Immunol Rev. 1989;112:183.
+6: response of vaccinated mice is mediated by CD8+ cells, prevents signs of
+gs://pmc_clone/DoMe/1/005.PMC79673.pdf
+Query2do.dm
+#######
