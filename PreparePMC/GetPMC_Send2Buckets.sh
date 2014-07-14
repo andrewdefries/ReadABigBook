@@ -5,6 +5,7 @@ cat file_list.pdf.txt | sed '1d' | sed 's/^/ftp:\/\/ftp.ncbi.nlm.nih.gov\/pub\/p
 
 #head PMCgetList
 
+./SplitWork.sh
 
-wget -i PMCgetList
+#wget -i PMCgetList
 
