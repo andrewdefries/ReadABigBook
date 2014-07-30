@@ -1,5 +1,5 @@
 ############################
-filecontent=(`cat DoWork_*`)
+filecontent=(`cat CoreWork_ab.NWork_*`)
 
 for t in "${filecontent[@]}"
 ####
@@ -7,23 +7,20 @@ do
 ####
 wget $t
 
-here=(`pwd`)
+pdftotext $t -raw
 
-cat $here > 
+textout=(`echo $t | sed 's/.pdf//g'`)
 
-cd ..
-gsutil -m cp -R
+s3cmd put $t s3://read_pubmedcentral
+s3cmd put $textout s3://read_pubmedcentral
 
 #pdftotext $t
-
 #pdf2svg $t
 #pdfimages $t
 
-#cp to gs://pmc_new
 
-rm *.pdf
-#rm *.txt
-rm *.pnm
+rm $t
+rm $textout
 
-
+####
 done
