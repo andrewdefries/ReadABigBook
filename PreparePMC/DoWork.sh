@@ -12,7 +12,6 @@ cd $m
 thedir=(`pwd`)
 use=(`basename $thedir`)
 ##
-#s3cmd mb s3://read_pubmedcentral/$esu/$use
 
 wgethis=(`cat NWork_*`)
 #cat the work to array and work on it
@@ -23,25 +22,29 @@ do
 ####
 wget $t
 
-pdftotext $t -raw
+pdfname=(`basename $t`)
 
-pdfname=(`ls *.pdf`)
-textout=(`echo $pdfname | sed 's/.pdf//g'`)
+#pdftotext $t -raw
 
+#pdfname=(`ls *.pdf`)
+#textout=(`echo $pdfname | sed 's/.pdf//g'`)
 
 s3cmd put $pdfname s3://read_pubmedcentral/$esu/$use/$pdfname
-s3cmd put $textout s3://read_pubmedcentral/$esu/$use/$textout
+#s3cmd put $textout s3://read_pubmedcentral/$esu/$use/$textout
 
 #pdftotext $t
 #pdf2svg $t
 #pdfimages $t
 
 
-rm $pdfname
-rm $textout
+#rm $pdfname
+#rm $textout
 
+rm $pdfname
 cd ..
 ####
+##s3cmd put --recursive $m s3://read_pubmedcentral/ ##$esu/$use/
+##rm -r $m
 echo "next workspace"
 
 done
