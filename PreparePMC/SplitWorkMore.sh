@@ -1,3 +1,4 @@
+#####################
 rm -r work.CoreWork_*
 #####################
 splitval=12188
@@ -18,9 +19,26 @@ for t in "${corework[@]}"
 do
 ######
 mkdir work.$t
-split -l $sweet $t $t.NWork_
-mv $t.NWork_* work.$t
+
 mv $t work.$t
 cp DoWork.sh work.$t
+
+cd work.$t
+split -l $sweet $t NWork_
+##
+final=(`ls NWork_*`)
+
+for f in "${final[@]}"
+do
+
+mkdir work.$f
+mv $f work.$f
+
+cp DoWork.sh work.$f
+
+#####
+done
+
+cd ..
 ######
 done
