@@ -3,6 +3,7 @@ rm -r work.CoreWork_*
 #####################
 splitval=12188
 cores=8
+#cores=(`nproc`) fix later
 total=(`cat PMCgetList | wc -l`)
 
 
@@ -34,7 +35,6 @@ do
 mkdir work.$f
 mv $f work.$f
 
-cp DoWork.sh work.$f
 
 #####
 done
