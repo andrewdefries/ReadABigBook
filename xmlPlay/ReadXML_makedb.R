@@ -8,61 +8,32 @@ rm(list=ls())
 
 #unzip the archive first
 
-#get the list of work
-files<-list.files(pattern=".nxml", recursive=TRUE)
+#get the list of work #this slows things down
+#files<-list.files(pattern=".nxml", recursive=TRUE)
+load("xmlFiles.rda")
+
 
 #########
 DoTheEmbedding<-function(u){
 #########
 #load file
 doc<-htmlParse(files[u])
-
-#load query #//Author //Body
-#query<-"//publisher-name"
-#query<-"//abstract id='Abs1'"
-##query<-"//body"
-#query<-"/article/abstract[@id='Abs1']"
-query<-"//abstract"
-
-#use when xml object is not rooted
-#doc<-xmlRoot(doc)
-
-
-#dataTable<-xpathSApply(doc, query)
-
-#dataTable<-xmlToDataFrame(data)
-
-datalist<-xmlToDataFrame(doc[query])##[[1]]
-
-dataTable<-datalist$p
-
-#dataTable<-as.character(dataTable$p[1:length(dataTable)])
-
-##, stringsAsFactors=F, check.names=F)##, header=T)
-
-#con<-dbConnect(SQLite(),dbname="XML_db.sqlite")
+#abstract<-xmlToDataFrame(doc[query])[[1]]
+abstract<-xmlToDataFrame(getNodeSet(doc, "//abstract"))$p[1]
+pmcid<-xmlToDataFrame(getNodeSet(doc, "//article-id"))$text[2]
+dataTable<-cbind(as.vector(pmcid), as.vector(abstract))
+#######
 print(u)
-#print(dim(dataTable))
-#print(length(dataTable))
-
 #
-#
-if(length(dataTable)>0){
+#if(length(dataTable[2])>0){
+if(sum(dim(dataTable))==3){
 ########################
+colnames(dataTable)<-c("PMCID", "Abstract")
 dataTable<-as.data.frame(dataTable)
-####print(dataTable)
-#only want the first hit
-#dataTable<-dataTable[1]
-#dataTable<-dataTable$p[1]
-names(dataTable)<-c("text")
-
-###
-
-###
-
+####
 #write to db
-sql<-paste("INSERT INTO MyQuery VALUES ($text)", sep="") 
-
+sql<-paste("INSERT INTO MyQuery VALUES ($PMCID, $Abstract)", sep="") 
+####
 con<-dbConnect(SQLite(),dbname="XML_db.sqlite")
 dbBeginTransaction(con)
 dbGetPreparedQuery(con,sql,bind.data=dataTable)
@@ -70,9 +41,7 @@ dbCommit(con)
 dbDisconnect(con)
 ########################
 } else {
-
-print(paste(u, "has no entry", sep=" "))
-
+print(paste(u, "has no Abstract", sep=" "))
 }
 #########d
 }
@@ -81,8 +50,8 @@ print(paste(u, "has no entry", sep=" "))
 u<-1  ##:length(files)
 
 #########
-lapply(u, try(DoTheEmbedding, silent=T)) ##, mc.cores=4)
-#mclapply(u, DoTheEmbedding, mc.cores=4)
+#lapply(u, try(DoTheEmbedding, silent=T)) ##, mc.cores=4)
+mclapply(u, DoTheEmbedding, mc.cores=4)
 
 
 #dbDisconnect(con)
