@@ -47,11 +47,11 @@ print(paste(u, "has no Abstract", sep=" "))
 }
 #u<-28272#:length(files) #26326
 #u<-26324 #28272#:length(files) #26326 78051
-u<-1  ##:length(files)
+u<-1:length(files)
 
 #########
 #lapply(u, try(DoTheEmbedding, silent=T)) ##, mc.cores=4)
-mclapply(u, DoTheEmbedding, mc.cores=4)
+mclapply(u, DoTheEmbedding, mc.cores=8)
 
 
 #dbDisconnect(con)
