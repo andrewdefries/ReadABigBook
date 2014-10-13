@@ -37,8 +37,14 @@ sql<-paste("INSERT INTO MyQuery VALUES ($PMCID, $Abstract)", sep="")
 con<-dbConnect(SQLite(),dbname="XML_db.sqlite")
 dbBeginTransaction(con)
 dbGetPreparedQuery(con,sql,bind.data=dataTable)
+####
+if(dbCommit(con)==TRUE){
+dbDisconnect(con)
+####
+} else {
 dbCommit(con)
 dbDisconnect(con)
+}
 ########################
 } else {
 print(paste(u, "has no Abstract", sep=" "))
@@ -51,7 +57,7 @@ u<-1:length(files)
 
 #########
 #lapply(u, try(DoTheEmbedding, silent=T)) ##, mc.cores=4)
-mclapply(u, DoTheEmbedding, mc.cores=8)
+mclapply(u, DoTheEmbedding, mc.cores=4)
 
 
 #dbDisconnect(con)

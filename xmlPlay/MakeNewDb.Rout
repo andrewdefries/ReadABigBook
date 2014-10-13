@@ -1,0 +1,46 @@
+
+R version 3.1.1 (2014-07-10) -- "Sock it to Me"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> library(RSQLite)
+Loading required package: DBI
+> 
+> #open db if none create one
+> con<-dbConnect(SQLite(),dbname="XML_db.sqlite")
+> 
+> dbSendQuery(conn=con,
++     "CREATE TABLE MyQuery
++      (PMCID INTEGER, Abstract CHARACTER)")
+<SQLiteResult: DBI RES (13016, 0, 1)> 
+> 
+> dbBeginTransaction(con)
+[1] TRUE
+> dbCommit(con)
+[1] TRUE
+> dbDisconnect(con)
+[1] TRUE
+> 
+> files<-list.files(pattern=".nxml", recursive=TRUE)
+> 
+> save(files, file="xmlFiles.rda", compress=T)
+> 
+> proc.time()
+   user  system elapsed 
+ 16.469   1.548  19.425 
