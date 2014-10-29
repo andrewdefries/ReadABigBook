@@ -1,7 +1,7 @@
 #################
 library(XML)
 library(parallel)
-library(RSQLite)
+#library(RSQLite)
 #################
 rm(list=ls())
 #system("rm *.sqlite")
@@ -32,19 +32,17 @@ colnames(dataTable)<-c("PMCID", "Abstract")
 dataTable<-as.data.frame(dataTable)
 ####
 #write to db
-sql<-paste("INSERT INTO MyQuery VALUES ($PMCID, $Abstract)", sep="") 
+##sql<-paste("INSERT INTO MyQuery VALUES ($PMCID, $Abstract)", sep="") 
 ####
-con<-dbConnect(SQLite(),dbname="XML_db.sqlite")
-dbBeginTransaction(con)
-dbGetPreparedQuery(con,sql,bind.data=dataTable)
+##con<-dbConnect(SQLite(),dbname="XML_db.sqlite")
+##dbBeginTransaction(con)
+##dbGetPreparedQuery(con,sql,bind.data=dataTable)
 ####
-if(dbCommit(con)==TRUE){
-dbDisconnect(con)
-####
-} else {
-dbCommit(con)
-dbDisconnect(con)
-}
+##while(dbCommit(con)==FALSE){
+##dbCommit(con)
+##}
+##dbDisconnect(con)
+save(dataTable, file=gsub(".nxml", ".rda", files[u]), compress=T)
 ########################
 } else {
 print(paste(u, "has no Abstract", sep=" "))
@@ -54,10 +52,11 @@ print(paste(u, "has no Abstract", sep=" "))
 #u<-28272#:length(files) #26326
 #u<-26324 #28272#:length(files) #26326 78051
 u<-1:length(files)
-
+#u<-24564:length(files)
+#u<-1
 #########
 #lapply(u, try(DoTheEmbedding, silent=T)) ##, mc.cores=4)
-mclapply(u, DoTheEmbedding, mc.cores=4)
+mclapply(u, DoTheEmbedding, mc.cores=8)
 
 
 #dbDisconnect(con)
